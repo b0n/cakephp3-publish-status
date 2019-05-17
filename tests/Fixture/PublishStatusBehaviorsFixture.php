@@ -7,7 +7,7 @@ use Cake\ORM\Table;
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * Class PostsTable
+ * Class PublishStatusBehaviorsTable
  * @mixin PublishStatusBehavior
  */
 class PublishStatusBehaviorsTable extends Table implements PublishStatusInterface
