@@ -3,13 +3,9 @@ namespace PublishStatus\Test\TestCase\Model\Behavior;
 
 use Cake\TestSuite\TestCase;
 use Cake\Utility\Hash;
-use Debugkit\Test\Fixture\PanelsFixture;
-
 use PublishStatus\Test\Fixture\NewsFixture;
 use PublishStatus\Test\Fixture\PublishStatusBehaviorsFixture;
 use PublishStatus\Test\Fixture\PublishStatusBehaviorsTable;
-use SoftDelete\Test\Fixture\UsersFixture;
-use SoftDelete\Test\Fixture\UsersTable;
 
 /**
  * PublishStatus\Model\Behavior\PublishStatusBehavior Test Case
@@ -19,21 +15,20 @@ class PublishStatusBehaviorTest extends TestCase
 {
 
     /**
+     * Test subject
+     *
+     * @var \PublishStatus\Test\Fixture\NewsTable
+     */
+    public $table;
+
+    /**
      * Fixtures
      *
      * @var array
      */
     public $fixtures = [
-        //'plugin.SoftDelete.Users',
-        //'plugin.PublishStatus.News',
-        'plugin.PublishStatus.PublishStatusBehaviors'
-        //'plugin.Debugkit.Panels'
+        'plugin.PublishStatus.News',
     ];
-
-    /**
-     * @var
-     */
-    public $table;
 
     /**
      * setUp method
@@ -43,7 +38,8 @@ class PublishStatusBehaviorTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->table = $this->getTableLocator()->get('PublishStatusBehavior', ['className' => 'PublishStatus\Test\Fixture\PublishStatusBehaviorsTable']);
+        $config = ['className' => 'PublishStatus\Test\Fixture\NewsTable'];
+        $this->table = $this->getTableLocator()->get('News', $config);
     }
 
     /**
