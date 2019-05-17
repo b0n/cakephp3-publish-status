@@ -1,22 +1,22 @@
 {
     "name": "b0n/cakephp3-publish-status",
-    "description": "publish status plugin for CakePHP",
+    "description": "PublishStatus plugin for CakePHP",
     "type": "cakephp-plugin",
     "license": "MIT",
     "require": {
-        "cakephp/cakephp": "^3.4"
+        "cakephp/cakephp": "^3.5"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7|^6.0"
     },
     "autoload": {
         "psr-4": {
-            "PublishStatus\\": "src"
+            "PublishStatus\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PublishStatus\\Test\\": "tests",
+            "PublishStatus\\Test\\": "tests/",
             "Cake\\Test\\": "vendor/cakephp/cakephp/tests"
         }
     }
